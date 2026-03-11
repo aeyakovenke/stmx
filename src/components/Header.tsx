@@ -28,17 +28,22 @@ export default function Header() {
         </motion.div>
 
         <nav className="hidden md:flex gap-8">
-          {['agents', 'how-it-works', 'pricing', 'faq'].map((item, i) => (
+          {[
+            { id: 'agents', label: 'Agents' },
+            { id: 'how-it-works', label: 'How it works' },
+            { id: 'pricing', label: 'Pricing' },
+            { id: 'faq', label: 'FAQ' },
+          ].map((item, i) => (
             <motion.button
-              key={item}
+              key={item.id}
               initial={{ opacity: 0, y: -10 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2 + i * 0.08, duration: 0.4 }}
               whileHover={{ color: '#3d4fc8', y: -2 }}
-              onClick={() => scrollToSection(item)}
-              className="text-sm font-semibold text-gray-600 transition-colors capitalize"
+              onClick={() => scrollToSection(item.id)}
+              className="text-sm font-semibold text-gray-600 transition-colors"
             >
-              {item.replace('-', ' ')}
+              {item.label}
             </motion.button>
           ))}
         </nav>

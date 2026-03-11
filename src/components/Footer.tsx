@@ -6,8 +6,8 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
         <div>
           <h3 className="font-bold text-lg mb-4">STMX</h3>
-          <p className="text-gray-400 text-sm">
-            OpenClaw agents for every business type.
+          <p className="text-gray-400 text-sm leading-relaxed">
+            AI agents that work. Built on OpenClaw. No fluff, just results.
           </p>
         </div>
         <div>

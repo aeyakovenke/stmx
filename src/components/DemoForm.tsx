@@ -47,10 +47,10 @@ export default function DemoForm() {
           className="text-center mb-12"
         >
           <h2 className="text-4xl md:text-5xl font-bold mb-4">
-            Ready to Get Started?
+            See It In Action
           </h2>
           <p className="text-xl text-blue-100">
-            Request a personalized demo and see STMX in action.
+            Get a personalized walkthrough. We'll show you how to save hours every week.
           </p>
         </motion.div>
 

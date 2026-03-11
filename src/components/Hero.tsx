@@ -1,6 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
+import BlueLobster from './BlueLobster'
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -39,13 +40,13 @@ export default function Hero() {
         >
           <motion.div variants={itemVariants}>
             <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold bg-gradient-to-r from-navy-900 via-navy-700 to-blue-600 bg-clip-text text-transparent mb-6 leading-tight">
-              Agents for Every Business
+              AI Agents for Every Team
             </h1>
           </motion.div>
 
           <motion.div variants={itemVariants}>
-            <p className="text-lg md:text-xl text-gray-600 mb-8 leading-relaxed max-w-xl">
-              Deploy OpenClaw agents tailored to your business needs. From coding automation to design systems, assistant workflows, and more. Start in minutes.
+            <p className="text-lg md:text-xl text-gray-700 mb-8 leading-relaxed max-w-xl font-medium">
+              Automate your entire workflow with specialized AI agents. Code faster, design smarter, serve customers better. Deploy in minutes, not months.
             </p>
           </motion.div>
 
@@ -72,18 +73,18 @@ export default function Hero() {
           </motion.div>
         </motion.div>
 
-        {/* Right side - Lobster Emoji */}
+        {/* Right side - Blue Lobster */}
         <motion.div
           initial={{ opacity: 0, scale: 0.9 }}
           whileInView={{ opacity: 1, scale: 1 }}
           transition={{ type: 'spring', stiffness: 100, damping: 20, delay: 0.3 }}
           viewport={{ once: true, margin: '-100px' }}
-          className="h-96 md:h-[500px] rounded-3xl overflow-hidden shadow-2xl ring-1 ring-white/20 backdrop-blur-sm flex items-center justify-center"
+          className="h-96 md:h-[500px] rounded-3xl overflow-hidden shadow-2xl ring-1 ring-white/20 backdrop-blur-sm flex items-center justify-center p-8"
           style={{
             background: 'linear-gradient(135deg, #a6c1e8 0%, #5677d4 100%)',
           }}
         >
-          <div className="text-9xl md:text-[200px]">🦞</div>
+          <BlueLobster />
         </motion.div>
       </div>
     </section>

@@ -9,7 +9,7 @@ export default function Pricing() {
       name: 'Starter',
       price: '$299',
       period: '/month',
-      description: 'Perfect for getting started',
+      description: 'Great for testing the waters',
       agents: 1,
       features: [
         '1 Agent Type',
@@ -24,12 +24,12 @@ export default function Pricing() {
       name: 'Professional',
       price: '$799',
       period: '/month',
-      description: 'For growing businesses',
+      description: 'Most popular for growing teams',
       agents: 3,
       features: [
         '3 Agent Types',
         'Up to 10,000 tasks/month',
-        'Priority email & chat support',
+        'Priority chat & email support',
         'Advanced integrations',
         'Custom workflows',
         'Team dashboard',
@@ -40,14 +40,14 @@ export default function Pricing() {
       name: 'Enterprise',
       price: 'Custom',
       period: '',
-      description: 'For large-scale operations',
+      description: 'For high-volume operations',
       agents: 'Unlimited',
       features: [
         'All Agent Types',
         'Unlimited tasks',
-        '24/7 phone & dedicated support',
+        '24/7 dedicated support',
         'Custom integrations',
-        'API access',
+        'Full API access',
         'SLA guarantee',
         'White-label options',
       ],
@@ -66,10 +66,10 @@ export default function Pricing() {
           className="text-center mb-16"
         >
           <h2 className="text-4xl md:text-5xl font-bold text-navy-900 mb-4">
-            Simple, Transparent Pricing
+            Plans for Every Team
           </h2>
-          <p className="text-xl text-gray-600">
-            Choose the plan that fits your needs. Always flexible.
+          <p className="text-xl text-gray-700 font-medium">
+            Start small, scale big. No surprises, no lock-in contracts.
           </p>
         </motion.div>
 

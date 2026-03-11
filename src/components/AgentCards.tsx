@@ -27,21 +27,21 @@ export default function AgentCards() {
     {
       icon: Code2,
       title: 'Coding Agent',
-      description: 'Automate development tasks, code reviews, testing, and deployment pipelines.',
+      description: 'Ship faster code. Auto-generate features, review PRs, catch bugs before they ship, and refactor intelligently.',
       features: ['Code Generation', 'PR Reviews', 'Bug Detection', 'Refactoring'],
       color: 'from-blue-500 to-blue-600',
     },
     {
       icon: Palette,
       title: 'Design Agent',
-      description: 'Design systems, component generation, brand consistency, and asset management.',
+      description: 'Keep design consistent. Auto-generate components, maintain your brand, and build design systems that scale.',
       features: ['Component Gen', 'Design QA', 'Brand Sync', 'Asset Creation'],
       color: 'from-purple-500 to-purple-600',
     },
     {
       icon: Bot,
       title: 'Assistant Agent',
-      description: 'Customer support, workflow automation, scheduling, and business intelligence.',
+      description: 'Never miss a customer. Handle support tickets, automate workflows, and turn data into actionable insights.',
       features: ['Customer Support', 'Data Analysis', 'Scheduling', 'Reporting'],
       color: 'from-green-500 to-green-600',
     },
@@ -61,10 +61,10 @@ export default function AgentCards() {
           className="text-center mb-16"
         >
           <h2 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-navy-900 to-blue-600 bg-clip-text text-transparent mb-4">
-            Meet Your Agent Team
+            Three Powerful Agents
           </h2>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            Choose agents that fit your business needs. Mix and match.
+          <p className="text-lg text-gray-700 max-w-2xl mx-auto font-medium">
+            Pick one or use them together. Each agent is built for a specific job and works seamlessly with the others.
           </p>
         </motion.div>
 

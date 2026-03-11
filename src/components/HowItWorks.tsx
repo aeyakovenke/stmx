@@ -7,22 +7,22 @@ export default function HowItWorks() {
     {
       number: '01',
       title: 'Choose Your Agents',
-      description: 'Select agents that match your business needs.',
+      description: 'Pick the agents you need. Coding. Design. Support. All of them.',
     },
     {
       number: '02',
-      title: 'Configure Settings',
-      description: 'Customize workflows and integrations in minutes.',
+      title: 'Connect Your Tools',
+      description: 'Link your GitHub, Slack, Figma, and more in seconds.',
     },
     {
       number: '03',
-      title: 'Deploy & Automate',
-      description: 'Launch agents and watch automation happen.',
+      title: 'Hit Deploy',
+      description: 'One click. Your agents go live and start working immediately.',
     },
     {
       number: '04',
-      title: 'Monitor & Optimize',
-      description: 'Track performance and refine with AI insights.',
+      title: 'Watch & Scale',
+      description: 'Monitor results, adjust settings, scale as you grow.',
     },
   ]
 
@@ -37,10 +37,10 @@ export default function HowItWorks() {
           className="text-center mb-16"
         >
           <h2 className="text-4xl md:text-5xl font-bold text-navy-900 mb-4">
-            How It Works
+            From Setup to Automation
           </h2>
-          <p className="text-xl text-gray-600">
-            Get your agents running in four simple steps.
+          <p className="text-xl text-gray-700 font-medium">
+            Get your first agent working in minutes. No code, no engineering team required.
           </p>
         </motion.div>
 

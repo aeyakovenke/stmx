@@ -45,10 +45,10 @@ export default function FAQ() {
           className="text-center mb-16"
         >
           <h2 className="text-4xl md:text-5xl font-bold text-navy-900 mb-4">
-            Frequently Asked Questions
+            Questions We Get
           </h2>
-          <p className="text-xl text-gray-600">
-            Everything you need to know about STMX.
+          <p className="text-xl text-gray-700 font-medium">
+            Everything you need to know to get started.
           </p>
         </motion.div>
 

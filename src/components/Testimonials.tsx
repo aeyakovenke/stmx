@@ -6,19 +6,19 @@ import { Star } from 'lucide-react'
 export default function Testimonials() {
   const testimonials = [
     {
-      quote: "STMX transformed our development workflow. We're shipping 40% faster.",
+      quote: "We're shipping code 40% faster. STMX handles code review and testing so our team can focus on features that matter.",
       author: 'Sarah Chen',
       role: 'CTO, TechStartup Inc',
       avatar: '👩‍💻',
     },
     {
-      quote: 'The design agent maintains our brand consistency perfectly. Game-changer.',
+      quote: 'Our brand stays consistent across all designs. The design agent learned our style in hours, not weeks.',
       author: 'Marcus Rodriguez',
       role: 'Design Lead, Creative Co',
       avatar: '🎨',
     },
     {
-      quote: 'Our support team loves the assistant agent. Customer satisfaction up 35%.',
+      quote: 'Support response time dropped from 2 days to 2 hours. Our customers are happier, our team is less stressed.',
       author: 'Emily Watson',
       role: 'Customer Success, ServicePlus',
       avatar: '😊',
@@ -36,10 +36,10 @@ export default function Testimonials() {
           className="text-center mb-16"
         >
           <h2 className="text-4xl md:text-5xl font-bold text-navy-900 mb-4">
-            Loved by Teams
+            Teams Love Us
           </h2>
-          <p className="text-xl text-gray-600">
-            See how STMX is transforming businesses.
+          <p className="text-xl text-gray-700 font-medium">
+            Real results from teams using STMX today.
           </p>
         </motion.div>
 
