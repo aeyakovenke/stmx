@@ -1,0 +1,30 @@
+{
+  "name": "stmx-landing",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "next": "^14.2.3",
+    "three": "^r128",
+    "@react-three/fiber": "^8.15.12",
+    "@react-three/drei": "^9.88.3",
+    "framer-motion": "^10.16.16",
+    "lucide-react": "^0.360.0"
+  },
+  "devDependencies": {
+    "typescript": "^5",
+    "@types/node": "^20",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+    "autoprefixer": "^10",
+    "postcss": "^8",
+    "tailwindcss": "^3.4.1"
+  }
+}
