@@ -7,18 +7,18 @@ const containerVariants = {
   visible: {
     opacity: 1,
     transition: {
-      staggerChildren: 0.15,
-      delayChildren: 0.2,
+      staggerChildren: 0.12,
+      delayChildren: 0.1,
     },
   },
 }
 
 const itemVariants = {
-  hidden: { opacity: 0, y: 20 },
+  hidden: { opacity: 0, y: 15 },
   visible: {
     opacity: 1,
     y: 0,
-    transition: { type: 'spring', stiffness: 100, damping: 12 },
+    transition: { duration: 0.6, ease: 'easeOut' },
   },
 }
 
@@ -77,9 +77,9 @@ export default function Hero() {
 
         {/* Right side - Blue Lobster */}
         <motion.div
-          initial={{ opacity: 0, scale: 0.9 }}
-          whileInView={{ opacity: 1, scale: 1 }}
-          transition={{ type: 'spring', stiffness: 100, damping: 20, delay: 0.3 }}
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7, delay: 0.2, ease: 'easeOut' }}
           viewport={{ once: true, margin: '-100px' }}
           className="h-96 md:h-[500px] rounded-3xl overflow-hidden shadow-2xl ring-1 ring-white/20 flex items-center justify-center p-8 bg-white"
         >
