@@ -47,10 +47,10 @@ export default function DemoForm() {
           className="text-center mb-12"
         >
           <h2 className="text-4xl md:text-5xl font-bold mb-4">
-            See It In Action
+            Request Your OpenClaw Demo
           </h2>
           <p className="text-xl text-blue-100">
-            Get a personalized walkthrough. We'll show you how to save hours every week.
+            See how OpenClaw agents transform your business. Get a personalized setup walkthrough.
           </p>
         </motion.div>
 

@@ -26,6 +26,10 @@ body {
   button {
     @apply transition-all duration-300 ease-out;
   }
+  
+  a {
+    @apply transition-colors duration-200;
+  }
 }
 
 /* Custom animations */

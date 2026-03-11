@@ -39,13 +39,13 @@ export default function Hero() {
         >
           <motion.div variants={itemVariants}>
             <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold bg-gradient-to-r from-navy-900 via-navy-700 to-blue-600 bg-clip-text text-transparent mb-6 leading-tight">
-              AI Agents for Every Team
+              OpenClaw Agents for Every Business
             </h1>
           </motion.div>
 
           <motion.div variants={itemVariants}>
             <p className="text-lg md:text-xl text-gray-700 mb-8 leading-relaxed max-w-xl font-medium">
-              Automate your entire workflow with specialized AI agents. Code faster, design smarter, serve customers better. Deploy in minutes, not months.
+              Set up specialized OpenClaw agents tailored to your business. Automate coding workflows, design systems, customer support, and more. Deploy intelligent agents in minutes.
             </p>
           </motion.div>
 

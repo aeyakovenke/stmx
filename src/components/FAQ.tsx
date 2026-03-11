@@ -9,28 +9,28 @@ export default function FAQ() {
 
   const faqs = [
     {
-      question: 'How quickly can I deploy an agent?',
-      answer: 'Most agents are ready to go in less than 10 minutes. Configure your settings, connect your integrations, and launch. That\'s it.',
+      question: 'How quickly can I set up OpenClaw agents?',
+      answer: 'Most OpenClaw agents are live in under 10 minutes. Select your agents, connect your tools (GitHub, Slack, Figma, etc.), and deploy. That\'s it.',
     },
     {
-      question: 'Can I use multiple agents together?',
-      answer: 'Absolutely! Agents work seamlessly together. The Coding Agent can work with the Design Agent for end-to-end automation.',
+      question: 'Can I combine multiple OpenClaw agents?',
+      answer: 'Yes! OpenClaw agents work perfectly together. Combine the Coding, Design, and Assistant agents for complete automation.',
     },
     {
-      question: 'What integrations are supported?',
-      answer: 'We support 100+ integrations including Slack, GitHub, Jira, Figma, Stripe, and more. Custom integrations available on Enterprise.',
+      question: 'What tools does OpenClaw integrate with?',
+      answer: 'OpenClaw supports 100+ integrations: GitHub, Slack, Jira, Figma, Stripe, Salesforce, and more. Custom integrations available on Enterprise plans.',
     },
     {
-      question: 'Is my data secure?',
-      answer: 'Yes. We use enterprise-grade encryption, SOC2 compliance, and regular security audits. All data is encrypted in transit and at rest.',
+      question: 'Is my data safe with OpenClaw?',
+      answer: 'Absolutely. Enterprise-grade encryption, SOC2 compliance, and regular security audits. All data encrypted in transit and at rest.',
     },
     {
-      question: 'What if I need to cancel?',
-      answer: 'No problem. Cancel anytime, no lock-in contracts. Your data is yours—we\'ll export it in any format you need.',
+      question: 'Can I cancel my OpenClaw subscription?',
+      answer: 'Yes. Cancel anytime—no contracts, no lock-in. Your data is yours. We\'ll export everything in any format you need.',
     },
     {
-      question: 'Do you offer training and support?',
-      answer: 'Yes. All plans include documentation and community support. Professional and Enterprise plans include dedicated support.',
+      question: 'What support do you provide?',
+      answer: 'All plans include documentation and community support. Professional+ plans get dedicated support, onboarding, and training.',
     },
   ]
 
@@ -45,10 +45,10 @@ export default function FAQ() {
           className="text-center mb-16"
         >
           <h2 className="text-4xl md:text-5xl font-bold text-navy-900 mb-4">
-            Questions We Get
+            OpenClaw Questions
           </h2>
           <p className="text-xl text-gray-700 font-medium">
-            Everything you need to know to get started.
+            Everything you need to know before setting up your OpenClaw agents.
           </p>
         </motion.div>
 

@@ -9,7 +9,7 @@ export default function Footer() {
             <img src="/logos/stmx-logo-main.png" alt="STMX" className="h-10 w-auto" />
           </div>
           <p className="text-gray-400 text-sm leading-relaxed">
-            AI agents that work. Built on OpenClaw. No fluff, just results.
+            OpenClaw agent setup for every business. Automate. Scale. Dominate.
           </p>
         </div>
         <div>
@@ -40,7 +40,7 @@ export default function Footer() {
 
       <div className="border-t border-gray-700 pt-8">
         <div className="flex flex-col md:flex-row items-center justify-between text-sm text-gray-400">
-          <p>&copy; 2024 STMX. All rights reserved.</p>
+          <p>&copy; 2026 STMX. All rights reserved.</p>
           <div className="flex gap-6 mt-4 md:mt-0">
             <a href="#" className="hover:text-white transition-colors">Twitter</a>
             <a href="#" className="hover:text-white transition-colors">GitHub</a>

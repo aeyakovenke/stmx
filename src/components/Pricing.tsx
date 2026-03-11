@@ -9,11 +9,11 @@ export default function Pricing() {
       name: 'Starter',
       price: '$299',
       period: '/month',
-      description: 'Great for testing the waters',
+      description: 'Test OpenClaw with one agent',
       agents: 1,
       features: [
-        '1 Agent Type',
-        'Up to 1,000 tasks/month',
+        '1 OpenClaw Agent',
+        'Up to 1,000 automation tasks/month',
         'Email support',
         'Basic integrations',
         'Community access',
@@ -24,15 +24,15 @@ export default function Pricing() {
       name: 'Professional',
       price: '$799',
       period: '/month',
-      description: 'Most popular for growing teams',
+      description: 'Perfect for growing businesses',
       agents: 3,
       features: [
-        '3 Agent Types',
-        'Up to 10,000 tasks/month',
-        'Priority chat & email support',
+        '3 OpenClaw Agents',
+        'Up to 10,000 automation tasks/month',
+        'Priority support',
         'Advanced integrations',
         'Custom workflows',
-        'Team dashboard',
+        'Team management',
       ],
       highlighted: true,
     },
@@ -40,16 +40,15 @@ export default function Pricing() {
       name: 'Enterprise',
       price: 'Custom',
       period: '',
-      description: 'For high-volume operations',
+      description: 'Unlimited agents, unlimited scale',
       agents: 'Unlimited',
       features: [
-        'All Agent Types',
-        'Unlimited tasks',
+        'All OpenClaw Agent Types',
+        'Unlimited automation tasks',
         '24/7 dedicated support',
         'Custom integrations',
         'Full API access',
         'SLA guarantee',
-        'White-label options',
       ],
       highlighted: false,
     },
@@ -66,10 +65,10 @@ export default function Pricing() {
           className="text-center mb-16"
         >
           <h2 className="text-4xl md:text-5xl font-bold text-navy-900 mb-4">
-            Plans for Every Team
+            OpenClaw Agent Plans
           </h2>
           <p className="text-xl text-gray-700 font-medium">
-            Start small, scale big. No surprises, no lock-in contracts.
+            Choose the right number of agents for your business. Scale up as you grow.
           </p>
         </motion.div>
 

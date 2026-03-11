@@ -6,19 +6,19 @@ import { Star } from 'lucide-react'
 export default function Testimonials() {
   const testimonials = [
     {
-      quote: "We're shipping code 40% faster. STMX handles code review and testing so our team can focus on features that matter.",
+      quote: "OpenClaw's coding agent cut our code review time in half. We ship 40% faster and catch more bugs before production.",
       author: 'Sarah Chen',
       role: 'CTO, TechStartup Inc',
       avatar: '👩‍💻',
     },
     {
-      quote: 'Our brand stays consistent across all designs. The design agent learned our style in hours, not weeks.',
+      quote: 'The OpenClaw design agent maintains our brand perfectly. Consistent components across all projects now.',
       author: 'Marcus Rodriguez',
       role: 'Design Lead, Creative Co',
       avatar: '🎨',
     },
     {
-      quote: 'Support response time dropped from 2 days to 2 hours. Our customers are happier, our team is less stressed.',
+      quote: 'OpenClaw handled our support tickets 24/7. Response time from 2 days to 2 hours. Our customers notice.',
       author: 'Emily Watson',
       role: 'Customer Success, ServicePlus',
       avatar: '😊',
@@ -36,10 +36,10 @@ export default function Testimonials() {
           className="text-center mb-16"
         >
           <h2 className="text-4xl md:text-5xl font-bold text-navy-900 mb-4">
-            Teams Love Us
+            Teams Love OpenClaw
           </h2>
           <p className="text-xl text-gray-700 font-medium">
-            Real results from teams using STMX today.
+            Real results from businesses running OpenClaw agents.
           </p>
         </motion.div>
 

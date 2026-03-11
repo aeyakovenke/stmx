@@ -27,21 +27,21 @@ export default function AgentCards() {
     {
       icon: Code2,
       title: 'Coding Agent',
-      description: 'Ship faster code. Auto-generate features, review PRs, catch bugs before they ship, and refactor intelligently.',
+      description: 'OpenClaw coding automation. Auto-review pull requests, generate code, catch bugs, refactor legacy systems. Ship features 3x faster.',
       features: ['Code Generation', 'PR Reviews', 'Bug Detection', 'Refactoring'],
       color: 'from-blue-500 to-blue-600',
     },
     {
       icon: Palette,
       title: 'Design Agent',
-      description: 'Keep design consistent. Auto-generate components, maintain your brand, and build design systems that scale.',
+      description: 'OpenClaw design system management. Generate components, enforce brand consistency, manage design assets at scale.',
       features: ['Component Gen', 'Design QA', 'Brand Sync', 'Asset Creation'],
       color: 'from-purple-500 to-purple-600',
     },
     {
       icon: Bot,
       title: 'Assistant Agent',
-      description: 'Never miss a customer. Handle support tickets, automate workflows, and turn data into actionable insights.',
+      description: 'OpenClaw customer operations. Handle support tickets, automate business workflows, generate insights from your data.',
       features: ['Customer Support', 'Data Analysis', 'Scheduling', 'Reporting'],
       color: 'from-green-500 to-green-600',
     },
@@ -61,10 +61,10 @@ export default function AgentCards() {
           className="text-center mb-16"
         >
           <h2 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-navy-900 to-blue-600 bg-clip-text text-transparent mb-4">
-            Three Powerful Agents
+            Three OpenClaw Agents
           </h2>
           <p className="text-lg text-gray-700 max-w-2xl mx-auto font-medium">
-            Pick one or use them together. Each agent is built for a specific job and works seamlessly with the others.
+            Choose the agents your business needs. Each OpenClaw agent handles a specific workflow and integrates seamlessly with your tools.
           </p>
         </motion.div>
 
@@ -81,12 +81,12 @@ export default function AgentCards() {
               <motion.div
                 key={agent.title}
                 variants={cardVariants}
-                whileHover={{ y: -8, boxShadow: '0 25px 50px rgba(31, 42, 92, 0.12)' }}
+                whileHover={{ y: -4, boxShadow: '0 20px 40px rgba(31, 42, 92, 0.1)' }}
                 className="p-8 rounded-2xl border border-gray-100 bg-white/80 backdrop-blur-sm hover:border-navy-200 transition-all group"
               >
                 <motion.div
-                  whileHover={{ scale: 1.1, rotate: 5 }}
-                  className={`inline-block p-4 rounded-xl bg-gradient-to-r ${agent.color} mb-6 shadow-lg`}
+                  whileHover={{ scale: 1.05 }}
+                  className={`inline-block p-4 rounded-xl bg-gradient-to-r ${agent.color} mb-6 shadow-lg transition-transform`}
                 >
                   <Icon className="w-6 h-6 text-white" />
                 </motion.div>

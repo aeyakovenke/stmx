@@ -6,23 +6,23 @@ export default function HowItWorks() {
   const steps = [
     {
       number: '01',
-      title: 'Choose Your Agents',
-      description: 'Pick the agents you need. Coding. Design. Support. All of them.',
+      title: 'Select OpenClaw Agents',
+      description: 'Choose which agents your business needs. Coding. Design. Assistant.',
     },
     {
       number: '02',
-      title: 'Connect Your Tools',
-      description: 'Link your GitHub, Slack, Figma, and more in seconds.',
+      title: 'Configure & Connect',
+      description: 'Link to your GitHub, Slack, Figma, or other tools. Takes minutes.',
     },
     {
       number: '03',
-      title: 'Hit Deploy',
-      description: 'One click. Your agents go live and start working immediately.',
+      title: 'Deploy Live',
+      description: 'One click to launch. Your OpenClaw agents start working immediately.',
     },
     {
       number: '04',
-      title: 'Watch & Scale',
-      description: 'Monitor results, adjust settings, scale as you grow.',
+      title: 'Monitor & Grow',
+      description: 'Track automation results, optimize workflows, scale without limits.',
     },
   ]
 
@@ -37,10 +37,10 @@ export default function HowItWorks() {
           className="text-center mb-16"
         >
           <h2 className="text-4xl md:text-5xl font-bold text-navy-900 mb-4">
-            From Setup to Automation
+            Set Up OpenClaw in Minutes
           </h2>
           <p className="text-xl text-gray-700 font-medium">
-            Get your first agent working in minutes. No code, no engineering team required.
+            From selection to automation. Deploy your OpenClaw agents and start saving time immediately.
           </p>
         </motion.div>
 
