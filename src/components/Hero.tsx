@@ -3,70 +3,87 @@
 import { motion } from 'framer-motion'
 import dynamic from 'next/dynamic'
 
-const Robot3D = dynamic(() => import('./Robot3D'), { ssr: false })
+const Lobster3D = dynamic(() => import('./Robot3D'), { ssr: false })
+
+const containerVariants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.15,
+      delayChildren: 0.2,
+    },
+  },
+}
+
+const itemVariants = {
+  hidden: { opacity: 0, y: 20 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { type: 'spring', stiffness: 100, damping: 12 },
+  },
+}
 
 export default function Hero() {
   return (
-    <section className="pt-32 pb-20 px-6 bg-gradient-to-b from-navy-50 to-white">
-      <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+    <section className="pt-32 pb-20 px-6 bg-gradient-to-br from-navy-50 via-white to-blue-50 relative overflow-hidden">
+      {/* Decorative background elements */}
+      <div className="absolute top-0 -right-40 w-80 h-80 bg-navy-200 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob" />
+      <div className="absolute -bottom-8 -left-40 w-80 h-80 bg-blue-200 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob animation-delay-2000" />
+
+      <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center relative z-10">
         {/* Left side - Content */}
         <motion.div
-          initial={{ opacity: 0, x: -50 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.8 }}
-          viewport={{ once: true }}
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: '-100px' }}
         >
-          <motion.h1
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.2, duration: 0.6 }}
-            viewport={{ once: true }}
-            className="text-5xl md:text-6xl font-bold text-navy-900 mb-6 leading-tight"
-          >
-            Agents for Every Business
-          </motion.h1>
+          <motion.div variants={itemVariants}>
+            <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold bg-gradient-to-r from-navy-900 via-navy-700 to-blue-600 bg-clip-text text-transparent mb-6 leading-tight">
+              Agents for Every Business
+            </h1>
+          </motion.div>
 
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.4, duration: 0.6 }}
-            viewport={{ once: true }}
-            className="text-xl text-gray-600 mb-8 leading-relaxed"
-          >
-            Deploy OpenClaw agents tailored to your business needs. From coding automation to design systems, assistant workflows, and more. Start in minutes.
-          </motion.p>
+          <motion.div variants={itemVariants}>
+            <p className="text-lg md:text-xl text-gray-600 mb-8 leading-relaxed max-w-xl">
+              Deploy OpenClaw agents tailored to your business needs. From coding automation to design systems, assistant workflows, and more. Start in minutes.
+            </p>
+          </motion.div>
 
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.6, duration: 0.6 }}
-            viewport={{ once: true }}
+            variants={itemVariants}
             className="flex gap-4 flex-wrap"
           >
-            <button 
+            <motion.button
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
               onClick={() => document.getElementById('demo')?.scrollIntoView({ behavior: 'smooth' })}
-              className="px-8 py-3 bg-gradient-to-r from-navy-600 to-navy-800 text-white rounded-lg font-medium hover:shadow-lg hover:shadow-navy-600/30 transition-all hover:scale-105"
+              className="px-8 py-4 bg-gradient-to-r from-navy-600 to-navy-800 text-white rounded-xl font-semibold hover:shadow-2xl hover:shadow-navy-600/40 transition-all"
             >
               Request Demo
-            </button>
-            <button 
+            </motion.button>
+            <motion.button
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
               onClick={() => document.getElementById('agents')?.scrollIntoView({ behavior: 'smooth' })}
-              className="px-8 py-3 border-2 border-navy-600 text-navy-600 rounded-lg font-medium hover:bg-navy-50 transition-colors"
+              className="px-8 py-4 border-2 border-navy-600 text-navy-600 rounded-xl font-semibold hover:bg-navy-50 transition-colors"
             >
               Explore Agents
-            </button>
+            </motion.button>
           </motion.div>
         </motion.div>
 
-        {/* Right side - 3D Robot */}
+        {/* Right side - 3D Lobster */}
         <motion.div
-          initial={{ opacity: 0, scale: 0.8 }}
+          initial={{ opacity: 0, scale: 0.9 }}
           whileInView={{ opacity: 1, scale: 1 }}
-          transition={{ delay: 0.3, duration: 0.8 }}
-          viewport={{ once: true }}
-          className="h-96 md:h-[500px] rounded-2xl overflow-hidden shadow-2xl"
+          transition={{ type: 'spring', stiffness: 100, damping: 20, delay: 0.3 }}
+          viewport={{ once: true, margin: '-100px' }}
+          className="h-96 md:h-[500px] rounded-3xl overflow-hidden shadow-2xl ring-1 ring-white/20 backdrop-blur-sm"
         >
-          <Robot3D />
+          <Lobster3D />
         </motion.div>
       </div>
     </section>

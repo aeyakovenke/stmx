@@ -25,6 +25,7 @@ const config: Config = {
       animation: {
         'float': 'float 6s ease-in-out infinite',
         'pulse-glow': 'pulse-glow 2s ease-in-out infinite',
+        'blob': 'blob 7s infinite',
       },
       keyframes: {
         float: {
@@ -35,6 +36,15 @@ const config: Config = {
           '0%, 100%': { boxShadow: '0 0 20px rgba(93, 119, 212, 0.5)' },
           '50%': { boxShadow: '0 0 40px rgba(93, 119, 212, 0.8)' },
         },
+        blob: {
+          '0%, 100%': { transform: 'translate(0, 0) scale(1)' },
+          '25%': { transform: 'translate(20px, -50px) scale(1.1)' },
+          '50%': { transform: 'translate(-20px, 20px) scale(0.9)' },
+          '75%': { transform: 'translate(50px, 50px) scale(1.05)' },
+        },
+      },
+      boxShadow: {
+        'glow': '0 0 30px rgba(93, 119, 212, 0.4)',
       },
     },
   },

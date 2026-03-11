@@ -1,90 +1,65 @@
 'use client'
 
-import { Canvas } from '@react-three/fiber'
-import { OrbitControls, PerspectiveCamera } from '@react-three/drei'
-import { useRef, useEffect } from 'react'
+import { Canvas, useFrame } from '@react-three/fiber'
+import { PerspectiveCamera, Float } from '@react-three/drei'
+import { useRef } from 'react'
 import * as THREE from 'three'
 
-function RobotModel() {
+function LobsterEmoji() {
   const groupRef = useRef<THREE.Group>(null)
 
-  useEffect(() => {
+  useFrame((state) => {
     if (groupRef.current) {
-      groupRef.current.rotation.y = 0.3
+      groupRef.current.rotation.y += 0.004
+      groupRef.current.position.y = Math.sin(state.clock.elapsedTime * 0.8) * 0.2
     }
-  }, [])
+  })
 
   return (
     <group ref={groupRef}>
-      {/* Head */}
-      <mesh position={[0, 2.5, 0]}>
-        <boxGeometry args={[1, 1.2, 1]} />
-        <meshStandardMaterial color="#5677d4" metalness={0.8} roughness={0.2} />
-      </mesh>
-
-      {/* Eyes */}
-      <mesh position={[-0.3, 2.7, 0.5]}>
-        <sphereGeometry args={[0.15, 32, 32]} />
-        <meshStandardMaterial color="#00ff88" emissive="#00ff88" />
-      </mesh>
-      <mesh position={[0.3, 2.7, 0.5]}>
-        <sphereGeometry args={[0.15, 32, 32]} />
-        <meshStandardMaterial color="#00ff88" emissive="#00ff88" />
-      </mesh>
-
-      {/* Body */}
-      <mesh position={[0, 1.2, 0]}>
-        <boxGeometry args={[1.2, 1.8, 0.8]} />
-        <meshStandardMaterial color="#3d4fc8" metalness={0.7} roughness={0.3} />
-      </mesh>
-
-      {/* Left Arm */}
-      <mesh position={[-0.8, 1.5, 0]}>
-        <boxGeometry args={[0.4, 1.2, 0.4]} />
-        <meshStandardMaterial color="#5677d4" metalness={0.8} roughness={0.2} />
-      </mesh>
-
-      {/* Right Arm */}
-      <mesh position={[0.8, 1.5, 0]}>
-        <boxGeometry args={[0.4, 1.2, 0.4]} />
-        <meshStandardMaterial color="#5677d4" metalness={0.8} roughness={0.2} />
-      </mesh>
-
-      {/* Left Leg */}
-      <mesh position={[-0.4, 0.2, 0]}>
-        <boxGeometry args={[0.4, 1.2, 0.4]} />
-        <meshStandardMaterial color="#2f3fa8" metalness={0.8} roughness={0.2} />
-      </mesh>
-
-      {/* Right Leg */}
-      <mesh position={[0.4, 0.2, 0]}>
-        <boxGeometry args={[0.4, 1.2, 0.4]} />
-        <meshStandardMaterial color="#2f3fa8" metalness={0.8} roughness={0.2} />
-      </mesh>
-
-      {/* Chest Light */}
-      <mesh position={[0, 1.2, 0.42]}>
-        <planeGeometry args={[0.4, 0.4]} />
-        <meshStandardMaterial color="#00ff88" emissive="#00ff88" />
+      <mesh position={[0, 0, 0]}>
+        <planeGeometry args={[4, 4]} />
+        <meshStandardMaterial
+          map={createCanvasTexture()}
+          toneMapped={false}
+        />
       </mesh>
     </group>
   )
 }
 
-export default function Robot3D() {
+function createCanvasTexture() {
+  const canvas = document.createElement('canvas')
+  canvas.width = 512
+  canvas.height = 512
+  const ctx = canvas.getContext('2d')!
+  
+  // Draw lobster emoji
+  ctx.font = 'bold 400px Arial'
+  ctx.textAlign = 'center'
+  ctx.textBaseline = 'middle'
+  ctx.fillText('🦞', 256, 256)
+  
+  const texture = new THREE.CanvasTexture(canvas)
+  return texture
+}
+
+export default function Lobster3D() {
   return (
     <Canvas className="w-full h-full">
-      <PerspectiveCamera makeDefault position={[0, 2, 4]} />
-      <OrbitControls 
-        autoRotate 
-        autoRotateSpeed={4}
-        enableZoom={false}
-        enablePan={false}
-      />
-      <ambientLight intensity={0.5} />
-      <directionalLight position={[5, 5, 5]} intensity={1} />
-      <pointLight position={[0, 2, 3]} intensity={0.8} color="#00ff88" />
-      <RobotModel />
+      <PerspectiveCamera makeDefault position={[0, 0, 5]} />
+      <ambientLight intensity={0.8} />
+      <directionalLight position={[5, 5, 5]} intensity={1.2} color="#5677d4" />
+      <pointLight position={[-5, -5, 5]} intensity={0.6} color="#a6c1e8" />
+      
+      <Float
+        speed={1.5}
+        rotationIntensity={0.3}
+        floatIntensity={1.5}
+        floatingRange={[-0.1, 0.1]}
+      >
+        <LobsterEmoji />
+      </Float>
     </Canvas>
   )
 }

@@ -3,6 +3,25 @@
 import { motion } from 'framer-motion'
 import { Code2, Palette, Bot } from 'lucide-react'
 
+const containerVariants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.15,
+    },
+  },
+}
+
+const cardVariants = {
+  hidden: { opacity: 0, y: 30 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { type: 'spring', stiffness: 100, damping: 12 },
+  },
+}
+
 export default function AgentCards() {
   const agents = [
     {
@@ -29,45 +48,60 @@ export default function AgentCards() {
   ]
 
   return (
-    <section id="agents" className="py-20 px-6 bg-white">
-      <div className="max-w-7xl mx-auto">
+    <section id="agents" className="py-24 px-6 bg-gradient-to-b from-white via-blue-50/30 to-white relative overflow-hidden">
+      {/* Decorative background */}
+      <div className="absolute top-20 left-0 w-96 h-96 bg-navy-100 rounded-full mix-blend-multiply filter blur-3xl opacity-10" />
+
+      <div className="max-w-7xl mx-auto relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          viewport={{ once: true }}
+          viewport={{ once: true, margin: '-100px' }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-navy-900 mb-4">
+          <h2 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-navy-900 to-blue-600 bg-clip-text text-transparent mb-4">
             Meet Your Agent Team
           </h2>
-          <p className="text-xl text-gray-600">
+          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
             Choose agents that fit your business needs. Mix and match.
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {agents.map((agent, index) => {
+        <motion.div
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: '-100px' }}
+          className="grid grid-cols-1 md:grid-cols-3 gap-8"
+        >
+          {agents.map((agent) => {
             const Icon = agent.icon
             return (
               <motion.div
                 key={agent.title}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ delay: index * 0.2, duration: 0.6 }}
-                viewport={{ once: true }}
-                whileHover={{ y: -10, boxShadow: '0 20px 40px rgba(31, 42, 92, 0.15)' }}
-                className="p-8 rounded-2xl border border-gray-200 hover:border-navy-200 transition-all bg-white group"
+                variants={cardVariants}
+                whileHover={{ y: -8, boxShadow: '0 25px 50px rgba(31, 42, 92, 0.12)' }}
+                className="p-8 rounded-2xl border border-gray-100 bg-white/80 backdrop-blur-sm hover:border-navy-200 transition-all group"
               >
-                <div className={`inline-block p-3 rounded-lg bg-gradient-to-r ${agent.color} mb-6 group-hover:scale-110 transition-transform`}>
+                <motion.div
+                  whileHover={{ scale: 1.1, rotate: 5 }}
+                  className={`inline-block p-4 rounded-xl bg-gradient-to-r ${agent.color} mb-6 shadow-lg`}
+                >
                   <Icon className="w-6 h-6 text-white" />
-                </div>
+                </motion.div>
                 <h3 className="text-2xl font-bold text-navy-900 mb-3">{agent.title}</h3>
-                <p className="text-gray-600 mb-6">{agent.description}</p>
+                <p className="text-gray-600 mb-6 leading-relaxed">{agent.description}</p>
                 <ul className="space-y-2">
                   {agent.features.map((feature) => (
                     <li key={feature} className="flex items-center text-sm text-gray-700">
-                      <span className="w-1.5 h-1.5 bg-navy-600 rounded-full mr-3" />
+                      <motion.span
+                        initial={{ scale: 0 }}
+                        whileInView={{ scale: 1 }}
+                        transition={{ type: 'spring' }}
+                        viewport={{ once: true }}
+                        className="w-2 h-2 bg-gradient-to-r from-navy-600 to-blue-600 rounded-full mr-3"
+                      />
                       {feature}
                     </li>
                   ))}
@@ -75,7 +109,7 @@ export default function AgentCards() {
               </motion.div>
             )
           })}
-        </div>
+        </motion.div>
       </div>
     </section>
   )
