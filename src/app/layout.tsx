@@ -2,8 +2,14 @@ import type { Metadata } from 'next'
 import './globals.css'
 
 export const metadata: Metadata = {
-  title: 'STMX - OpenClaw Agent Platform',
-  description: 'Deploy AI agents for any business type. Coding, Design, Assistant agents ready to work.',
+  title: 'STMX - AI Agents for Every Team',
+  description: 'Deploy AI agents built on OpenClaw. Automate coding, design, and customer support. Start in minutes.',
+  icons: {
+    icon: [
+      { url: '/logos/stmx-logo.png', sizes: '32x32', type: 'image/png' },
+    ],
+    apple: '/logos/stmx-logo.png',
+  },
 }
 
 export default function RootLayout({
@@ -13,6 +19,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      <head>
+        <link rel="icon" href="/logos/stmx-logo.png" type="image/png" />
+        <link rel="apple-touch-icon" href="/logos/stmx-logo.png" />
+      </head>
       <body className="bg-white text-gray-900">{children}</body>
     </html>
   )

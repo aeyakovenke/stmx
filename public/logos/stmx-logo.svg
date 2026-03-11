@@ -1,0 +1,45 @@
+<svg viewBox="0 0 300 100" xmlns="http://www.w3.org/2000/svg" width="300" height="100">
+  <defs>
+    <style>
+      .stmx-letter { font-family: 'Arial', sans-serif; font-size: 72px; font-weight: 900; fill: #0f1530; }
+      .circuit-dot { fill: #0f1530; }
+      .circuit-line { stroke: #0f1530; stroke-width: 1.5; fill: none; }
+    </style>
+  </defs>
+
+  <!-- Text -->
+  <text x="10" y="70" class="stmx-letter">STMX</text>
+
+  <!-- Circuit nodes and lines -->
+  <!-- S circuit elements -->
+  <circle cx="35" cy="35" r="2" class="circuit-dot"/>
+  <circle cx="50" cy="30" r="2" class="circuit-dot"/>
+  <line x1="35" y1="35" x2="50" y2="30" class="circuit-line"/>
+
+  <!-- T circuit elements -->
+  <circle cx="85" cy="25" r="2" class="circuit-dot"/>
+  <circle cx="100" cy="28" r="2" class="circuit-dot"/>
+  <circle cx="95" cy="45" r="2" class="circuit-dot"/>
+  <line x1="85" y1="25" x2="100" y2="28" class="circuit-line"/>
+  <line x1="100" y1="28" x2="95" y2="45" class="circuit-line"/>
+
+  <!-- M circuit elements -->
+  <circle cx="130" cy="32" r="2" class="circuit-dot"/>
+  <circle cx="145" cy="25" r="2" class="circuit-dot"/>
+  <circle cx="160" cy="35" r="2" class="circuit-dot"/>
+  <circle cx="150" cy="48" r="2" class="circuit-dot"/>
+  <line x1="130" y1="32" x2="145" y2="25" class="circuit-line"/>
+  <line x1="145" y1="25" x2="160" y2="35" class="circuit-line"/>
+  <line x1="160" y1="35" x2="150" y2="48" class="circuit-line"/>
+
+  <!-- X circuit elements & growth arrow -->
+  <circle cx="195" cy="28" r="2" class="circuit-dot"/>
+  <circle cx="210" cy="42" r="2" class="circuit-dot"/>
+  <circle cx="220" cy="18" r="2" class="circuit-dot"/>
+  <line x1="195" y1="28" x2="210" y2="42" class="circuit-line"/>
+  <line x1="220" y1="18" x2="210" y2="42" class="circuit-line"/>
+
+  <!-- Growth arrow coming from X -->
+  <polyline points="245,15 260,0 265,15" stroke="#0f1530" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <line x1="252" y1="15" x2="252" y2="35" stroke="#0f1530" stroke-width="2" stroke-linecap="round"/>
+</svg>

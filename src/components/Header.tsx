@@ -17,15 +17,16 @@ export default function Header() {
       transition={{ type: 'spring', stiffness: 100, damping: 20 }}
       className="fixed top-0 w-full bg-white/90 backdrop-blur-xl z-50 border-b border-gray-100 shadow-lg shadow-gray-200/20"
     >
-      <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
-        <motion.div
+      <div className="max-w-7xl mx-auto px-6 py-3 flex items-center justify-between">
+        <motion.button
           initial={{ opacity: 0, x: -20 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ delay: 0.1, duration: 0.5 }}
-          className="text-2xl font-bold bg-gradient-to-r from-navy-700 to-blue-600 bg-clip-text text-transparent"
+          onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+          className="flex items-center gap-2 hover:opacity-80 transition-opacity cursor-pointer"
         >
-          STMX
-        </motion.div>
+          <img src="/logos/stmx-logo.png" alt="STMX" className="h-10 w-auto" />
+        </motion.button>
 
         <nav className="hidden md:flex gap-8">
           {[
