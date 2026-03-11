@@ -6,7 +6,7 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
         <div>
           <div className="mb-4">
-            <img src="/logos/stmx-logo.png" alt="STMX" className="h-8 w-auto brightness-0 invert" />
+            <img src="/logos/stmx-logo-main.png" alt="STMX" className="h-10 w-auto" />
           </div>
           <p className="text-gray-400 text-sm leading-relaxed">
             AI agents that work. Built on OpenClaw. No fluff, just results.

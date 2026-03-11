@@ -6,9 +6,9 @@ export const metadata: Metadata = {
   description: 'Deploy AI agents built on OpenClaw. Automate coding, design, and customer support. Start in minutes.',
   icons: {
     icon: [
-      { url: '/logos/stmx-logo.png', sizes: '32x32', type: 'image/png' },
+      { url: '/logos/stmx-logo-main.png', sizes: '32x32', type: 'image/png' },
     ],
-    apple: '/logos/stmx-logo.png',
+    apple: '/logos/stmx-logo-main.png',
   },
 }
 
@@ -20,8 +20,8 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <link rel="icon" href="/logos/stmx-logo.png" type="image/png" />
-        <link rel="apple-touch-icon" href="/logos/stmx-logo.png" />
+        <link rel="icon" href="/logos/stmx-logo-main.png" type="image/png" />
+        <link rel="apple-touch-icon" href="/logos/stmx-logo-main.png" />
       </head>
       <body className="bg-white text-gray-900">{children}</body>
     </html>

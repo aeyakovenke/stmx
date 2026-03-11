@@ -25,7 +25,7 @@ export default function Header() {
           onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
           className="flex items-center gap-2 hover:opacity-80 transition-opacity cursor-pointer"
         >
-          <img src="/logos/stmx-logo.png" alt="STMX" className="h-10 w-auto" />
+          <img src="/logos/stmx-logo-main.png" alt="STMX" className="h-12 w-auto" />
         </motion.button>
 
         <nav className="hidden md:flex gap-8">

@@ -1,7 +1,6 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import BlueLobster from './BlueLobster'
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -84,7 +83,11 @@ export default function Hero() {
             background: 'linear-gradient(135deg, #a6c1e8 0%, #5677d4 100%)',
           }}
         >
-          <BlueLobster />
+          <img 
+            src="/logos/lobster.png" 
+            alt="OpenClaw Lobster Agent" 
+            className="h-full w-full object-contain"
+          />
         </motion.div>
       </div>
     </section>
