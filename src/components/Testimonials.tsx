@@ -26,8 +26,11 @@ export default function Testimonials() {
   ]
 
   return (
-    <section className="py-20 px-6 bg-gradient-to-b from-navy-50 to-white">
-      <div className="max-w-7xl mx-auto">
+    <section className="py-20 px-6 relative">
+      {/* Navy gradient background */}
+      <div className="absolute inset-0 bg-gradient-to-b from-white via-blue-50/40 to-white" />
+      <div className="absolute top-10 right-0 w-80 h-80 bg-gradient-to-bl from-navy-200/25 to-transparent rounded-full mix-blend-multiply filter blur-3xl opacity-30" />
+      <div className="max-w-7xl mx-auto relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}

@@ -37,8 +37,10 @@ export default function UseCases() {
   ]
 
   return (
-    <section className="py-24 px-6 bg-white">
-      <div className="max-w-7xl mx-auto">
+    <section className="py-24 px-6 relative">
+      {/* Subtle navy gradient background */}
+      <div className="absolute inset-0 bg-gradient-to-b from-white via-blue-50/30 to-white" />
+      <div className="max-w-7xl mx-auto relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}

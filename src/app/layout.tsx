@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import './globals.css'
+import BackgroundGlow from '@/components/BackgroundGlow'
 
 export const metadata: Metadata = {
   title: 'STMX - AI Agents for Every Team',
@@ -23,7 +24,10 @@ export default function RootLayout({
         <link rel="icon" href="/logos/stmx-logo-main.png" type="image/png" />
         <link rel="apple-touch-icon" href="/logos/stmx-logo-main.png" />
       </head>
-      <body className="bg-white text-gray-900">{children}</body>
+      <body className="bg-white text-gray-900 relative">
+        <BackgroundGlow />
+        {children}
+      </body>
     </html>
   )
 }

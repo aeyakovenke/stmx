@@ -37,8 +37,12 @@ export default function DemoForm() {
   }
 
   return (
-    <section id="demo" className="py-20 px-6 bg-gradient-to-b from-navy-900 to-navy-800 text-white">
-      <div className="max-w-2xl mx-auto">
+    <section id="demo" className="py-20 px-6 relative text-white overflow-hidden">
+      {/* Navy background with gradient */}
+      <div className="absolute inset-0 bg-gradient-to-br from-navy-900 via-navy-800 to-navy-900" />
+      <div className="absolute top-0 right-0 w-96 h-96 bg-gradient-to-bl from-blue-600/30 to-transparent rounded-full mix-blend-screen filter blur-3xl opacity-50" />
+      <div className="absolute bottom-0 left-0 w-80 h-80 bg-gradient-to-tr from-navy-700/40 to-transparent rounded-full mix-blend-multiply filter blur-3xl opacity-40" />
+      <div className="max-w-2xl mx-auto relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}

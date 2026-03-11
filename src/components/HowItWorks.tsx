@@ -27,8 +27,11 @@ export default function HowItWorks() {
   ]
 
   return (
-    <section id="how-it-works" className="py-20 px-6 bg-gradient-to-b from-navy-50 to-white">
-      <div className="max-w-7xl mx-auto">
+    <section id="how-it-works" className="py-20 px-6 relative overflow-hidden">
+      {/* Navy gradient background */}
+      <div className="absolute inset-0 bg-gradient-to-b from-white via-blue-50/50 to-white" />
+      <div className="absolute bottom-0 left-0 w-96 h-96 bg-gradient-to-tr from-navy-300/20 to-transparent rounded-full mix-blend-multiply filter blur-3xl opacity-40" />
+      <div className="max-w-7xl mx-auto relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}

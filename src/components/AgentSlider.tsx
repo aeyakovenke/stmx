@@ -106,10 +106,13 @@ export default function AgentSlider() {
   const Icon = agent.icon
 
   return (
-    <section id="agents" className="py-24 px-6 bg-gradient-to-b from-white via-blue-50/30 to-white relative overflow-hidden">
-      <div className="absolute top-20 left-0 w-96 h-96 bg-navy-100 rounded-full mix-blend-multiply filter blur-3xl opacity-10" />
+    <section id="agents" className="py-24 px-6 relative overflow-hidden">
+      {/* Navy gradient background */}
+      <div className="absolute inset-0 bg-gradient-to-b from-white via-blue-50/50 to-white" />
+      <div className="absolute top-20 left-0 w-96 h-96 bg-gradient-to-br from-navy-400/20 to-transparent rounded-full mix-blend-multiply filter blur-3xl opacity-40" />
+      <div className="absolute bottom-0 right-0 w-80 h-80 bg-gradient-to-tl from-blue-400/15 to-transparent rounded-full mix-blend-multiply filter blur-3xl opacity-30" />
 
-      <div className="max-w-4xl mx-auto relative z-10">
+      <div className="max-w-4xl mx-auto relative z-20">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}

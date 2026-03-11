@@ -14,7 +14,22 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background: linear-gradient(135deg, #ffffff 0%, #f8f9fb 100%);
+  background: linear-gradient(135deg, #ffffff 0%, #f0f4fb 50%, #e6f0ff 100%);
+  position: relative;
+  overflow-x: hidden;
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at 20% 50%, rgba(93, 119, 212, 0.08) 0%, transparent 50%),
+              radial-gradient(circle at 80% 80%, rgba(61, 79, 200, 0.06) 0%, transparent 50%);
+  pointer-events: none;
+  z-index: -1;
 }
 
 @tailwind base;
@@ -81,6 +96,29 @@ body {
   }
 }
 
+@keyframes glow {
+  0%, 100% {
+    opacity: 0.5;
+    filter: blur(30px);
+  }
+  50% {
+    opacity: 0.8;
+    filter: blur(40px);
+  }
+}
+
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
 @keyframes float {
   0%, 100% {
     transform: translateY(0px) translateX(0px);
@@ -115,4 +153,38 @@ body {
 
 .animate-float {
   animation: float 6s ease-in-out infinite;
+}
+
+.glow-effect {
+  position: absolute;
+  border-radius: 50%;
+  animation: glow 4s ease-in-out infinite;
+}
+
+.glow-blue-1 {
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, rgba(93, 119, 212, 0.4) 0%, transparent 70%);
+  top: -100px;
+  left: -150px;
+  animation: glow 6s ease-in-out infinite;
+}
+
+.glow-blue-2 {
+  width: 300px;
+  height: 300px;
+  background: radial-gradient(circle, rgba(61, 79, 200, 0.3) 0%, transparent 70%);
+  bottom: -50px;
+  right: -100px;
+  animation: glow 5s ease-in-out infinite 1s;
+}
+
+/* Gradient text effect */
+.gradient-text {
+  background: linear-gradient(135deg, #0f1530 0%, #3d4fc8 50%, #5677d4 100%);
+  background-size: 200% 200%;
+  animation: gradientShift 6s ease infinite;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }

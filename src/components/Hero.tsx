@@ -24,12 +24,15 @@ const itemVariants = {
 
 export default function Hero() {
   return (
-    <section className="pt-32 pb-20 px-6 bg-gradient-to-br from-navy-50 via-white to-blue-50 relative overflow-hidden">
+    <section className="pt-32 pb-20 px-6 relative overflow-hidden">
+      {/* Navy blue background gradient */}
+      <div className="absolute inset-0 bg-gradient-to-br from-white via-blue-50/40 to-white" />
+      <div className="absolute top-0 right-0 w-96 h-96 bg-gradient-to-bl from-navy-200/30 to-transparent rounded-full mix-blend-multiply filter blur-3xl opacity-30" />
       {/* Decorative background elements */}
       <div className="absolute top-0 -right-40 w-80 h-80 bg-navy-200 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob" />
       <div className="absolute -bottom-8 -left-40 w-80 h-80 bg-blue-200 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob animation-delay-2000" />
 
-      <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center relative z-10">
+      <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center relative z-20">
         {/* Left side - Content */}
         <motion.div
           variants={containerVariants}

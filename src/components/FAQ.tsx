@@ -35,8 +35,11 @@ export default function FAQ() {
   ]
 
   return (
-    <section id="faq" className="py-20 px-6 bg-white">
-      <div className="max-w-3xl mx-auto">
+    <section id="faq" className="py-20 px-6 relative">
+      {/* Navy gradient background */}
+      <div className="absolute inset-0 bg-gradient-to-b from-white via-blue-50/30 to-white" />
+      <div className="absolute bottom-0 right-0 w-80 h-80 bg-gradient-to-tl from-navy-300/20 to-transparent rounded-full mix-blend-multiply filter blur-3xl opacity-30" />
+      <div className="max-w-3xl mx-auto relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
