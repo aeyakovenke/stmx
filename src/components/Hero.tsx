@@ -1,9 +1,6 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import dynamic from 'next/dynamic'
-
-const Lobster3D = dynamic(() => import('./Robot3D'), { ssr: false })
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -75,15 +72,18 @@ export default function Hero() {
           </motion.div>
         </motion.div>
 
-        {/* Right side - 3D Lobster */}
+        {/* Right side - Lobster Emoji */}
         <motion.div
           initial={{ opacity: 0, scale: 0.9 }}
           whileInView={{ opacity: 1, scale: 1 }}
           transition={{ type: 'spring', stiffness: 100, damping: 20, delay: 0.3 }}
           viewport={{ once: true, margin: '-100px' }}
-          className="h-96 md:h-[500px] rounded-3xl overflow-hidden shadow-2xl ring-1 ring-white/20 backdrop-blur-sm"
+          className="h-96 md:h-[500px] rounded-3xl overflow-hidden shadow-2xl ring-1 ring-white/20 backdrop-blur-sm flex items-center justify-center"
+          style={{
+            background: 'linear-gradient(135deg, #a6c1e8 0%, #5677d4 100%)',
+          }}
         >
-          <Lobster3D />
+          <div className="text-9xl md:text-[200px]">🦞</div>
         </motion.div>
       </div>
     </section>

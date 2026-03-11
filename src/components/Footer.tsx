@@ -1,16 +1,8 @@
 'use client'
 
-import { motion } from 'framer-motion'
-
 export default function Footer() {
   return (
-    <motion.footer
-      initial={{ opacity: 0 }}
-      whileInView={{ opacity: 1 }}
-      transition={{ duration: 0.6 }}
-      viewport={{ once: true }}
-      className="bg-navy-900 text-white py-12 px-6"
-    >
+    <footer className="bg-navy-900 text-white py-12 px-6">
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
         <div>
           <h3 className="font-bold text-lg mb-4">STMX</h3>
@@ -54,6 +46,6 @@ export default function Footer() {
           </div>
         </div>
       </div>
-    </motion.footer>
+    </footer>
   )
 }
