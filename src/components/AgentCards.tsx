@@ -1,7 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { Code2, Palette, Bot, Mail, Calendar, Phone, BarChart3, Shield, Zap, Users, FileText } from 'lucide-react'
+import { Code2, Palette, Mail, Calendar, Phone, BarChart3, Shield, Zap, Users, FileText } from 'lucide-react'
 
 const containerVariants = {
   hidden: { opacity: 0 },
