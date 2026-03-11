@@ -78,10 +78,7 @@ export default function Hero() {
           whileInView={{ opacity: 1, scale: 1 }}
           transition={{ type: 'spring', stiffness: 100, damping: 20, delay: 0.3 }}
           viewport={{ once: true, margin: '-100px' }}
-          className="h-96 md:h-[500px] rounded-3xl overflow-hidden shadow-2xl ring-1 ring-white/20 backdrop-blur-sm flex items-center justify-center p-8"
-          style={{
-            background: 'linear-gradient(135deg, #a6c1e8 0%, #5677d4 100%)',
-          }}
+          className="h-96 md:h-[500px] rounded-3xl overflow-hidden shadow-2xl ring-1 ring-white/20 flex items-center justify-center p-8 bg-white"
         >
           <img 
             src="/logos/lobster.png" 
