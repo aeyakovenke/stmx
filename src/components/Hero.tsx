@@ -19,27 +19,29 @@ export default function Hero() {
   }
 
   return (
-    <section className="pt-40 pb-32 px-6 md:px-8 relative overflow-hidden min-h-screen flex items-center">
-      {/* Background elements */}
+    <section className="relative pt-40 pb-32 px-6 md:px-8 overflow-hidden min-h-[90vh] flex items-center">
+      {/* Background gradient */}
       <div className="absolute inset-0 bg-gradient-to-br from-white via-blue-50/50 to-white" />
       <div className="absolute top-0 right-0 w-96 h-96 bg-gradient-to-bl from-navy-200/25 to-transparent rounded-full mix-blend-multiply filter blur-3xl opacity-30" />
       
-      {/* Lobster background image */}
+      {/* Large Lobster Background - Right side */}
       <motion.div
         initial={{ opacity: 0 }}
-        animate={{ opacity: 0.15 }}
-        transition={{ duration: 1, delay: 0.3 }}
-        className="absolute inset-0 flex items-center justify-end overflow-hidden pointer-events-none"
+        animate={{ opacity: 0.25 }}
+        transition={{ duration: 1, delay: 0.2 }}
+        className="absolute right-0 top-1/2 transform -translate-y-1/2 -mr-40 md:-mr-20 lg:mr-0 pointer-events-none z-0"
       >
         <img 
           src="/logos/lobster.png" 
           alt="" 
-          className="h-full w-auto object-contain opacity-50"
-          style={{ filter: 'brightness(0.8)' }}
+          className="h-screen w-auto object-contain opacity-40"
+          style={{ 
+            filter: 'drop-shadow(0 0 60px rgba(37, 99, 235, 0.1))'
+          }}
         />
       </motion.div>
 
-      {/* Content */}
+      {/* Content - Z-index higher than background */}
       <div className="max-w-6xl mx-auto w-full relative z-10">
         <div className="max-w-3xl">
           {/* Badge */}
