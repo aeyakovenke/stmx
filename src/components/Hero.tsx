@@ -45,7 +45,7 @@ export default function Hero() {
 
           <motion.div variants={itemVariants}>
             <p className="text-lg md:text-xl text-gray-700 mb-8 leading-relaxed max-w-xl font-medium">
-              Set up specialized OpenClaw agents tailored to your business. Automate coding workflows, design systems, customer support, and more. Deploy intelligent agents in minutes.
+              Deploy OpenClaw agents built for your industry. Choose from 10+ specialized agents: coding, email, scheduling, support, analytics, and more. Customize every agent to match your workflow. Any business type. Any scale.
             </p>
           </motion.div>
 

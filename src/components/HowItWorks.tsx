@@ -37,10 +37,10 @@ export default function HowItWorks() {
           className="text-center mb-16"
         >
           <h2 className="text-4xl md:text-5xl font-bold text-navy-900 mb-4">
-            Set Up OpenClaw in Minutes
+            Custom OpenClaw Setup for Your Business
           </h2>
           <p className="text-xl text-gray-700 font-medium">
-            From selection to automation. Deploy your OpenClaw agents and start saving time immediately.
+            Choose any combination of agents. Configure them to match your workflow. Deploy and automate everything in minutes.
           </p>
         </motion.div>
 

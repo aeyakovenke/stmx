@@ -1,7 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { Code2, Palette, Bot } from 'lucide-react'
+import { Code2, Palette, Bot, Mail, Calendar, Phone, BarChart3, Shield, Zap, Users, FileText } from 'lucide-react'
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -26,24 +26,73 @@ export default function AgentCards() {
   const agents = [
     {
       icon: Code2,
-      title: 'Coding Agent',
-      description: 'OpenClaw coding automation. Auto-review pull requests, generate code, catch bugs, refactor legacy systems. Ship features 3x faster.',
+      title: 'Code Agent',
+      description: 'Auto-generate code, review pull requests, detect bugs, refactor legacy systems. Ship features 3x faster with intelligent code automation.',
       features: ['Code Generation', 'PR Reviews', 'Bug Detection', 'Refactoring'],
       color: 'from-blue-500 to-blue-600',
     },
     {
       icon: Palette,
       title: 'Design Agent',
-      description: 'OpenClaw design system management. Generate components, enforce brand consistency, manage design assets at scale.',
-      features: ['Component Gen', 'Design QA', 'Brand Sync', 'Asset Creation'],
+      description: 'Generate design components, maintain brand consistency, manage assets at scale. Keep your design system perfect across all projects.',
+      features: ['Component Gen', 'Design QA', 'Brand Sync', 'Asset Management'],
       color: 'from-purple-500 to-purple-600',
     },
     {
-      icon: Bot,
-      title: 'Assistant Agent',
-      description: 'OpenClaw customer operations. Handle support tickets, automate business workflows, generate insights from your data.',
-      features: ['Customer Support', 'Data Analysis', 'Scheduling', 'Reporting'],
+      icon: Mail,
+      title: 'Email Agent',
+      description: 'Manage inbox overload. Auto-sort emails, generate responses, schedule sends, prioritize urgent messages. Zero inbox stress.',
+      features: ['Email Sorting', 'Response Gen', 'Scheduling', 'Prioritization'],
+      color: 'from-red-500 to-red-600',
+    },
+    {
+      icon: Calendar,
+      title: 'Schedule Agent',
+      description: 'Manage meetings and calendars automatically. Find time slots, send reminders, handle cancellations, coordinate teams.',
+      features: ['Meeting Sync', 'Time Finding', 'Reminders', 'Coordination'],
       color: 'from-green-500 to-green-600',
+    },
+    {
+      icon: Phone,
+      title: 'Call Agent',
+      description: 'Screen calls, take notes, handle voicemail, transcribe calls. Never miss important information or calls again.',
+      features: ['Call Screening', 'Transcription', 'Note Taking', 'Voicemail Mgmt'],
+      color: 'from-cyan-500 to-cyan-600',
+    },
+    {
+      icon: Users,
+      title: 'Support Agent',
+      description: 'Handle support tickets 24/7. Resolve common issues instantly, escalate complex ones, track satisfaction. Happy customers guaranteed.',
+      features: ['Ticket Handling', 'Issue Resolution', 'Escalation', 'Satisfaction Track'],
+      color: 'from-yellow-500 to-yellow-600',
+    },
+    {
+      icon: BarChart3,
+      title: 'Analytics Agent',
+      description: 'Turn data into insights. Generate reports, analyze trends, forecast metrics, visualize KPIs. Data-driven decisions made easy.',
+      features: ['Report Generation', 'Trend Analysis', 'Forecasting', 'KPI Tracking'],
+      color: 'from-indigo-500 to-indigo-600',
+    },
+    {
+      icon: Shield,
+      title: 'Security Agent',
+      description: 'Monitor for threats, enforce policies, manage access, audit logs. Enterprise-grade security automation without the headache.',
+      features: ['Threat Detection', 'Policy Enforcement', 'Access Control', 'Audit Logs'],
+      color: 'from-orange-500 to-orange-600',
+    },
+    {
+      icon: Zap,
+      title: 'Workflow Agent',
+      description: 'Automate business processes. Connect apps, trigger actions, manage approvals, streamline operations. Full automation control.',
+      features: ['Process Automation', 'App Integration', 'Approvals', 'Error Handling'],
+      color: 'from-pink-500 to-pink-600',
+    },
+    {
+      icon: FileText,
+      title: 'Document Agent',
+      description: 'Process documents at scale. Extract data, generate contracts, manage signatures, organize files. Document chaos solved.',
+      features: ['Data Extraction', 'Contract Gen', 'Signatures', 'Organization'],
+      color: 'from-teal-500 to-teal-600',
     },
   ]
 
@@ -61,10 +110,10 @@ export default function AgentCards() {
           className="text-center mb-16"
         >
           <h2 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-navy-900 to-blue-600 bg-clip-text text-transparent mb-4">
-            Three OpenClaw Agents
+            10+ OpenClaw Agents
           </h2>
           <p className="text-lg text-gray-700 max-w-2xl mx-auto font-medium">
-            Choose the agents your business needs. Each OpenClaw agent handles a specific workflow and integrates seamlessly with your tools.
+            Mix and match specialized agents for your business. Every agent is fully customizable and integrates with your existing tools.
           </p>
         </motion.div>
 
@@ -73,7 +122,7 @@ export default function AgentCards() {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, margin: '-100px' }}
-          className="grid grid-cols-1 md:grid-cols-3 gap-8"
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
         >
           {agents.map((agent) => {
             const Icon = agent.icon
