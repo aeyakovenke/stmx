@@ -1,0 +1,60 @@
+{
+  "interfere.com": {
+    "title": "Interfere \u203a Build better software",
+    "h1": null,
+    "hero_text": "Inbox",
+    "buttons": [],
+    "sections_count": 10,
+    "nav_items": [
+      "Changelog",
+      "Careers",
+      "Contact"
+    ]
+  },
+  "twine.com": {
+    "title": "Twine",
+    "h1": "\nCustomer intelligence\u00a0that grows revenue.\n",
+    "hero_text": "\nTwine analyzes every customer conversation, ties it to revenue, and delivers the signals\n        that move roadmaps, deals, and decisions. Automatically.\n",
+    "buttons": [
+      "     ",
+      "   ",
+      " "
+    ],
+    "sections_count": 8,
+    "nav_items": [
+      " ",
+      " ",
+      " ",
+      " ",
+      " ",
+      " "
+    ]
+  },
+  "www.conway.ai": {
+    "title": "Conway",
+    "h1": "Detection and response",
+    "hero_text": "Modern teams use Conway to automate operations from detection to decision. We drive end-to-end outcomes across mission-critical processes, including fraud and AML, content moderation, and IT operations.",
+    "buttons": [
+      "Solutions",
+      "File SAR",
+      "Dismiss"
+    ],
+    "sections_count": 6,
+    "nav_items": [
+      "Enterprise",
+      "Careers",
+      "Blog",
+      "Enterprise",
+      "Careers",
+      "Blog"
+    ]
+  },
+  "shade.inc": {
+    "title": "Shade",
+    "h1": "Media storage that",
+    "hero_text": "LET'S CHAT",
+    "buttons": [],
+    "sections_count": 2,
+    "nav_items": []
+  }
+}
